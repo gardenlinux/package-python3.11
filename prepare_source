@@ -1,2 +1,3 @@
 apt_src python3.11
 apply_patches
+version_suffix=gardenlinux0
