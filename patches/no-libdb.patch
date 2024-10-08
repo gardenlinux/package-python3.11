@@ -7,13 +7,13 @@ diff --color -Naur a/debian/control.in b/debian/control.in
    zlib1g-dev, libbz2-dev, liblzma-dev,
 -  libgdbm-dev, @bd_dbm@,
 +  libgdbm-dev,
- #  tk-dev, blt-dev (>= 2.4z),
-   libssl-dev,
+   tk-dev, blt-dev (>= 2.4z), libssl-dev,
    libexpat1-dev,
+   libbluetooth-dev [linux-any] <!pkg.@PVER@.nobluetooth>,
 diff --color -Naur a/debian/rules b/debian/rules
 --- a/debian/rules	2024-05-07 12:05:20.265273538 +0200
 +++ b/debian/rules	2024-05-07 12:09:20.237141190 +0200
-@@ -92,8 +92,7 @@
+@@ -89,8 +92,7 @@
  # FIXME: remove sid when uploading to unstable, after bookworm is released
  #ifneq (,$(filter $(distrelase), jessie stretch buster bullseye bookworm sid precise trusty xenial bionic focal groovy hirsute))
    with_dbmmodule = yes
