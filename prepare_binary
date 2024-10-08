@@ -1,3 +1,6 @@
 DEB_BUILD_OPTIONS="$DEB_BUILD_OPTIONS nobench nolto nopgo"
 apt-get install python3-pip -y
+# Python uses blurb to create NEWS entries and there is not debian package.
+# Do a unclean installation via pip to allow to generate the NEWS.
+# We need the older release of blurb when python 3.11 was shippted.
 pip install --break-system-packages blurb==1.1.0
