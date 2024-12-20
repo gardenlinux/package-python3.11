@@ -5,6 +5,6 @@ git_src --branch v3.11.10 https://github.com/python/cpython.git
 apply_patches
 
 # Build with the 1443 build environment.
-version_suffix=gardenlinux0+bp1443
+version_suffix=gl0+bp1443
 version_orig=3.11.10
 version="$version_orig-0"
